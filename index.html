@@ -1,23 +1,237 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="with=device-width, initial-scale=1.0">
-        <title>ElectroShop - Clone</title>
-        <style>
-            body{font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4;}
-            header {background: #222; color: white; text-align: center; padding: 2rem;}
-            h1 {margin: 0; font-size: 1.2rem; margin-top: 0.5rem;}
-        </style>
-    </head>
-    <body>
-        <header>
-            <h1>ElectroShop</h1>
-            <p class="slogan">Votre partenaire électronique de confiance au Bénin</p>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElectroBénin - Votre partenaire électronique de confiance au Bénin</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <main>
-            <h2 style="text-align: center; margin: 2rem;">Bienvenue sur le clone en cours de développement!</h2>
-        </main>
-    </body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span> ElectroBénin
+            </div>
+            <div class="hamburger">☰</div>  <!-- Hamburger mobile -->
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Votre partenaire électronique de confiance au Bénin</h1>
+            <p>Découvrez notre large gamme de composants électroniques de qualité professionnelle. Livraison rapide et support technique inclus.</p>
+            <button class="btn-primary">Explorer la boutique →</button>
+            <br>
+            <button class="btn-outline">En savoir plus</button>
+            <img src="https://media.istockphoto.com/id/594907500/photo/closeup-electronic-circuit-board.jpg?s=612x612&w=0&k=20&c=XlchPvcO2MFKZjOup_Q6AjCpa1gNCXuQtlRhpXm1Erc=" alt="Circuit board" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Catégories (déjà dans ton code) -->
+    <section id="categories">
+        <div class="container">
+            <h2>Nos Catégories</h2>
+            <p class="section-subtitle">Trouvez exactement ce dont vous avez besoin</p>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon" style="background: #007bff;"><span role="img">🖥️</span></div>
+                    <h3>Microcontrôleurs</h3>
+                    <p>Arduino, Raspberry Pi, ESP32</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(to bottom right, #6f42c1, #9f68e8);"><span role="img">📡</span></div>
+                    <h3>Capteurs</h3>
+                    <p>Température, mouvement, distance</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: #28a745;"><span role="img">🔌</span></div>
+                    <h3>Connecteurs</h3>
+                    <p>Câbles, prises, adaptateurs</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: #fd7e14;"><span role="img">⚡</span></div>
+                    <h3>Résistances</h3>
+                    <p>Toutes valeurs disponibles</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: #dc3545;"><span role="img">🔋</span></div>
+                    <h3>Alimentation</h3>
+                    <p>Transformateurs, batteries</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: #343a40;"><span role="img">🛠️</span></div>
+                    <h3>Outils</h3>
+                    <p>Multimètres, fers à souder</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: #17a2b8;"><span role="img">🖥️</span></div>
+                    <h3>Afficheurs</h3>
+                    <p>LCD, LED, OLED</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: #6f42c1;"><span role="img">🧰</span></div>
+                    <h3>Condensateurs</h3>
+                    <p>Électrolytiques, céramiques</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pourquoi nous choisir ? (déjà dans ton code) -->
+    <section id="why-us">
+        <div class="container">
+            <h2>Pourquoi nous choisir ?</h2>
+            <p class="section-subtitle">Votre satisfaction est notre priorité</p>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="card">
+                    <div class="card-icon" style="background: #007bff;"><span role="img">🛡️</span></div>
+                    <h3>Qualité garantie</h3>
+                    <p>Tous nos produits sont testés et certifiés pour une qualité optimale</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: #212529;"><span role="img">🚚</span></div>
+                    <h3>Livraison rapide</h3>
+                    <p>Livraison dans tout le Bénin sous 24-48h</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: #007bff;"><span role="img">🎧</span></div>
+                    <h3>Support technique</h3>
+                    <p>Assistance technique gratuite par nos experts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Meilleures ventes (déjà dans ton code) -->
+    <section id="bestsellers">
+        <div class="container">
+            <h2>Meilleures ventes</h2>
+            <p class="section-subtitle">Les produits préférés de nos clients</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="https://stm32-base.org/assets/img/boards/STM32F103C8T6_Blue_Pill-2.jpg" alt="STM32F103C8T6">
+                    <h3>STM32F103C8T6</h3>
+                    <p>Microcontrôleur ARM Cortex-M3 32 bits, haute performance. Idéal pour les projets avancés nécessitant plus de puissance de calcul.</p>
+                    <p class="price">1 800 FCFA</p>
+                    <p class="stock">✓ En stock (40 disponibles)</p>
+                </div>
+                <div class="card">
+                    <img src="https://store-usa.arduino.cc/cdn/shop/files/A000073_00.front_1200x900.jpg?v=1727102668" alt="Arduino Uno R3">
+                    <h3>Arduino Uno R3</h3>
+                    <p>Carte de développement basée sur le microcontrôleur ATmega328P. Idéale pour les débutants et les projets prototypes.</p>
+                    <p class="price">15 000 FCFA</p>
+                    <p class="stock">✓ En stock (25 disponibles)</p>
+                </div>
+                <div class="card">
+                    <img src="https://res.cloudinary.com/rs-designspark-live/image/upload/c_limit,w_530/f_auto/v1/article/arduino_433f0931b21c19369bcb8993eef059a4184628bc" alt="Arduino Nano">
+                    <h3>Arduino Nano</h3>
+                    <p>Carte de développement compacte, basée sur l'ATmega328. Parfaite pour les projets où l'espace est limité.</p>
+                    <p class="price">10 000 FCFA</p>
+                    <p class="stock">✓ En stock (35 disponibles)</p>
+                </div>
+                <div class="card">
+                    <img src="https://store-usa.arduino.cc/cdn/shop/files/A000067_00.front_1200x900.jpg?v=1727102662" alt="Arduino Mega 2560 R3">
+                    <h3>Arduino Mega 2560 R3</h3>
+                    <p>Carte de développement puissante avec un grand nombre de pins E/S. Idéale pour les projets complexes nécessitant beaucoup de périphériques.</p>
+                    <p class="price">35 000 FCFA</p>
+                    <p class="stock">✓ En stock (15 disponibles)</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="btn">Voir tous les produits</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" style="background: var(--dark);">
+        <div class="container">
+            <h2 style="color: white;">Témoignages clients</h2>
+            <p class="section-subtitle" style="color: #ccc;">Ce que disent nos clients satisfaits</p>
+            <div class="grid">
+                <div class="testimonial-card">
+                    <p>"Service excellent et produits de qualité. Je recommande vivement ElectroBénin pour tous vos besoins électroniques."</p>
+                    <div class="stars">★★★★★</div>
+                    <cite>Koffi Mensah</cite>
+                    <small>Ingénieur électronique</small>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Livraison rapide et support technique très utile. Parfait pour mes projets d'études !"</p>
+                    <div class="stars">★★★★★</div>
+                    <cite>Fatou Diallo</cite>
+                    <small>Étudiante en génie</small>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Large choix de composants et prix compétitifs. Mon fournisseur de référence au Bénin."</p>
+                    <div class="stars">★★★★★</div>
+                    <cite>Jean-Baptiste</cite>
+                    <small>Maker passionné</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="container">
+            <div class="newsletter-card">
+                <span style="font-size: 4rem;">✉️</span>
+                <h2>Restez informé</h2>
+                <p>Recevez nos dernières offres et nouveautés directement dans votre boîte mail</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse e-mail" required>
+                    <button type="submit">S'abonner</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <span style="font-size: 2.5rem;">⚡</span> ElectroBénin
+                <p>Votre partenaire électronique de confiance au Bénin</p>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>Liens utiles</h3>
+                    <ul>
+                        <li><a href="#">À propos</a></li>
+                        <li><a href="#">Boutique</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Centre d'aide</a></li>
+                        <li><a href="#">Livraison</a></li>
+                        <li><a href="#">Retours</a></li>
+                        <li><a href="#">Garantie</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Légal</h3>
+                    <ul>
+                        <li><a href="#">Conditions d'utilisation</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">CGV</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <p>📞 +229 XX XX XX XX</p>
+                <p>✉️ contact@electrobe nin.com</p>
+                <p>📍 Cotonou, Bénin</p>
+                <p>🕐 Lun-Sam : 8h-18h</p>
+            </div>
+            <div class="copyright">
+                © 2025 ElectroBénin. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+</body>
 </html>
