@@ -1,30 +1,35 @@
 // script.js - JavaScript pour ElectroBénin sublime
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Sélection des éléments
     const hamburger = document.querySelector('.hamburger');
-    const mainNav = document.querySelector('.main-nav');
+    const mobileNav = document.querySelector('.mobile-nav');
     const body = document.body;
 
-    // 1. Menu hamburger
-    hamburger.addEventListener('click', () => {
-        mainNav.classList.toggle('active');
-        body.classList.toggle('menu-open');
-        hamburger.textContent = mainNav.classList.contains('active') ? '✕' : '☰';
-    });
+    // 1. Menu hamburger (mobile)
+    if (hamburger && mobileNav) {
+        hamburger.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            body.classList.toggle('menu-open');
+            hamburger.textContent = mobileNav.classList.contains('active') ? '✕' : '☰';
+        });
+    }
 
     // Fermer le menu au clic sur un lien
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            mainNav.classList.remove('active');
-            body.classList.remove('menu-open');
-            hamburger.textContent = '☰';
+            if (mobileNav) mobileNav.classList.remove('active');
+            if (body) body.classList.remove('menu-open');
+            if (hamburger) hamburger.textContent = '☰';
         });
     });
 
     // Fermer le menu au clic sur l'overlay
     body.addEventListener('click', (e) => {
-        if (body.classList.contains('menu-open') && !mainNav.contains(e.target) && !hamburger.contains(e.target)) {
-            mainNav.classList.remove('active');
+        if (body.classList.contains('menu-open') && 
+            mobileNav && !mobileNav.contains(e.target) && 
+            hamburger && !hamburger.contains(e.target)) {
+            mobileNav.classList.remove('active');
             body.classList.remove('menu-open');
             hamburger.textContent = '☰';
         }
@@ -32,30 +37,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Panier
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const cartCount = document.createElement('span');
-    cartCount.className = 'cart-count';
-    cartCount.textContent = cart.length;
-    document.querySelector('.logo').appendChild(cartCount);
+    const cartCounts = document.querySelectorAll('.cart-count');
 
-    function updateCartCount() {
-        cartCount.textContent = cart.length;
+    // Mise à jour du compteur (desktop + mobile)
+    const updateCartCount = () => {
+        cartCounts.forEach(count => {
+            count.textContent = cart.length;
+        });
         localStorage.setItem('cart', JSON.stringify(cart));
-    }
+    };
 
+    updateCartCount(); // Initialisation au chargement
+
+    // Ajout au panier
     document.querySelectorAll('.btn-cart').forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
-            const productCard = button.closest('.card');
-            const productName = productCard.querySelector('h3').textContent;
-            const productPrice = productCard.querySelector('.price').textContent;
+            const card = button.closest('.card');
+            if (!card) return;
 
-            cart.push({ name: productName, price: productPrice });
+            const name = card.querySelector('h3')?.textContent || 'Produit';
+            const price = card.querySelector('.price')?.textContent || '0 FCFA';
+
+            cart.push({ name, price });
             updateCartCount();
 
             // Toast notification
             const toast = document.createElement('div');
             toast.className = 'toast';
-            toast.textContent = `${productName} ajouté au panier ! 🛒`;
+            toast.textContent = `${name} ajouté au panier ! 🛒`;
             document.body.appendChild(toast);
 
             setTimeout(() => toast.classList.add('show'), 100);
@@ -71,7 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const email = newsletterForm.querySelector('input[type="email"]').value.trim();
+            const emailInput = newsletterForm.querySelector('input[type="email"]');
+            const email = emailInput?.value.trim();
+
             if (email) {
                 alert(`Merci ! Vous êtes abonné avec ${email} 📧`);
                 newsletterForm.reset();
@@ -83,14 +95,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            if (href !== '#') {
+            if (href === '#' || href === '') return;
+
+            const target = document.querySelector(href);
+            if (target) {
                 e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+                // Fermer le menu mobile après clic
+                if (mobileNav && mobileNav.classList.contains('active')) {
+                    mobileNav.classList.remove('active');
+                    body.classList.remove('menu-open');
+                    if (hamburger) hamburger.textContent = '☰';
                 }
             }
         });
