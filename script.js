@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
             hamburger.textContent = '☰';
         });
     });
+    
     // 2. Panier
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartCount = document.createElement('span');
