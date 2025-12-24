@@ -1,6 +1,6 @@
 // script.js - JavaScript pour ElectroBénin sublime
 
-ddocument.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const mobileNav = document.querySelector('.mobile-nav');
     const body = document.body;
@@ -15,15 +15,9 @@ ddocument.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            if (mobileNav) {
-                mobileNav.classList.remove('active');
-            }
-            if (body) {
-                body.classList.remove('menu-open');
-            }
-            if (hamburger) {
-                hamburger.textContent = '☰';
-            }
+            if (mobileNav) mobileNav.classList.remove('active');
+            if (body) body.classList.remove('menu-open');
+            if (hamburger) hamburger.textContent = '☰';
         });
     });
 
@@ -37,12 +31,12 @@ ddocument.addEventListener('DOMContentLoaded', () => {
 
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartCounts = document.querySelectorAll('.cart-count');
+
     const updateCartCount = () => {
-        cartCounts.forEach(count => {
-            count.textContent = cart.length;
-        });
+        cartCounts.forEach(count => count.textContent = cart.length);
         localStorage.setItem('cart', JSON.stringify(cart));
     };
+
     updateCartCount();
 
     document.querySelectorAll('.btn-cart').forEach(button => {
@@ -50,16 +44,17 @@ ddocument.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const card = button.closest('.card');
             if (card) {
-                const name = card.querySelector('h3')?.textContent || 'Produit inconnu';
+                const name = card.querySelector('h3')?.textContent || 'Produit';
                 const price = card.querySelector('.price')?.textContent || '0 FCFA';
 
-                cart.push({ name: name, price: price });
+                cart.push({ name, price });
                 updateCartCount();
 
                 const toast = document.createElement('div');
                 toast.className = 'toast';
                 toast.textContent = `${name} ajouté au panier ! 🛒`;
                 document.body.appendChild(toast);
+
                 setTimeout(() => toast.classList.add('show'), 100);
                 setTimeout(() => {
                     toast.classList.remove('show');
@@ -73,8 +68,7 @@ ddocument.addEventListener('DOMContentLoaded', () => {
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const emailInput = newsletterForm.querySelector('input[type="email"]');
-            const email = emailInput ? emailInput.value.trim() : '';
+            const email = newsletterForm.querySelector('input[type="email"]')?.value.trim() || '';
             if (email) {
                 alert(`Merci ! Vous êtes abonné avec ${email} 📧`);
                 newsletterForm.reset();
@@ -85,14 +79,11 @@ ddocument.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            if (href && href !== '#' && href !== '') {
+            if (href !== '#' && href !== '') {
                 e.preventDefault();
                 const target = document.querySelector(href);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
             }
         });
