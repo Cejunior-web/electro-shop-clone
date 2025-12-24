@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body id="top">
 
     <header>
         <div class="container header-inner">
@@ -19,22 +19,22 @@
         </div>
     </header>
 
-    <!-- Menu mobile/desktop -->
-<nav class="main-nav">
-    <div class="container nav-links">
-        <a href="#hero">Accueil</a>
-        <a href="#categories">Catégories</a>
-        <a href="#products">Produits</a>
-        <a href="#testimonials">Témoignages</a>
-        <a href="#newsletter">Newsletter</a>
-        <a href="#footer">Contact</a>
-        <a href="#" class="cart-link">
-            Panier <span class="cart-count">0</span>
-        </a>
-    </div>
-</nav>
+    <nav class="main-nav">
+        <div class="container nav-links">
+            <a href="#top">Accueil</a>
+            <a href="#categories">Catégories</a>
+            <a href="#why-us">Pourquoi nous</a>
+            <a href="#products">Produits</a>
+            <a href="#testimonials">Témoignages</a>
+            <a href="#newsletter">Newsletter</a>
+            <a href="#footer">Contact</a>
+            <a href="#" class="cart-link">
+                Panier <span class="cart-count">0</span>
+            </a>
+        </div>
+    </nav>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="hero-content">
             <h1>Votre partenaire électronique de confiance au Bénin</h1>
             <p>Découvrez notre large gamme de composants électroniques de qualité professionnelle. Livraison rapide et support technique inclus.</p>
@@ -92,7 +92,76 @@
         </div>
     </section>
 
-    <section class="testimonials">
+    <section id="why-us">
+        <div class="container">
+            <h2>Pourquoi nous choisir ?</h2>
+            <p class="section-subtitle">Votre satisfaction est notre priorité</p>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4361ee, #7209b7);">🛡️</div>
+                    <h3>Qualité garantie</h3>
+                    <p>Tous nos produits sont testés et certifiés pour une qualité optimale</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #212529, #495057);">🚚</div>
+                    <h3>Livraison rapide</h3>
+                    <p>Livraison dans tout le Bénin sous 24-48h</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4361ee, #7209b7);">🎧</div>
+                    <h3>Support technique</h3>
+                    <p>Assistance technique gratuite par nos experts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products">
+        <div class="container">
+            <h2>Meilleures ventes</h2>
+            <p class="section-subtitle">Les produits préférés de nos clients</p>
+            <div class="grid">
+                <div class="card product-card">
+                    <img src="https://stm32-base.org/assets/img/boards/STM32F103C8T6_Blue_Pill-2.jpg" alt="STM32F103C8T6">
+                    <span class="tag">microcontrôleurs</span>
+                    <h3>STM32F103C8T6</h3>
+                    <p>Microcontrôleur ARM Cortex-M3 32 bits, haute performance. Idéal pour les projets avancés...</p>
+                    <p class="price">1 800 FCFA</p>
+                    <button class="btn-cart">🛒</button>
+                    <p class="stock">✓ En stock (40 disponibles)</p>
+                </div>
+                <div class="card product-card">
+                    <img src="https://store-usa.arduino.cc/cdn/shop/files/A000073_00.front_1200x900.jpg?v=1727102668" alt="Arduino Uno R3">
+                    <span class="tag">microcontrôleurs</span>
+                    <h3>Arduino Uno R3</h3>
+                    <p>Carte de développement basée sur le microcontrôleur ATmega328P. Idéale pour les débutants...</p>
+                    <p class="price">15 000 FCFA</p>
+                    <button class="btn-cart">🛒</button>
+                    <p class="stock">✓ En stock (25 disponibles)</p>
+                </div>
+                <div class="card product-card">
+                    <img src="https://m.media-amazon.com/images/I/61R1A7CuHTL._AC_SL1500_.jpg" alt="Arduino Nano">
+                    <span class="tag">microcontrôleurs</span>
+                    <h3>Arduino Nano</h3>
+                    <p>Carte de développement compacte, basée sur l'ATmega328. Parfaite pour les projets où l'espace...</p>
+                    <p class="price">10 000 FCFA</p>
+                    <button class="btn-cart">🛒</button>
+                    <p class="stock">✓ En stock (35 disponibles)</p>
+                </div>
+                <div class="card product-card">
+                    <img src="https://store-usa.arduino.cc/cdn/shop/files/A000067_00.front_1200x900.jpg?v=1727102662" alt="Arduino Mega 2560 R3">
+                    <span class="tag">microcontrôleurs</span>
+                    <h3>Arduino Mega 2560 R3</h3>
+                    <p>Carte de développement puissante avec un grand nombre de pins E/S. Idéale pour les projets complexes...</p>
+                    <p class="price">35 000 FCFA</p>
+                    <button class="btn-cart">🛒</button>
+                    <p class="stock">✓ En stock (15 disponibles)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
         <div class="container">
             <h2 style="color: white;">Témoignages clients</h2>
             <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Ce que disent nos clients satisfaits</p>
@@ -133,7 +202,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <div class="container">
             <div class="footer-logo">
                 <span style="font-size: 3rem;">⚡</span> ElectroBénin
@@ -174,6 +243,6 @@
         </div>
     </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
