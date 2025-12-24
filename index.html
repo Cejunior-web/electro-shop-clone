@@ -10,16 +10,16 @@
 </head>
 <body id="top">
 
-    <!-- HEADER OPTIMISÉ SUBLIME -->
+    <!-- HEADER CLASSE MONDIALE -->
     <header>
         <div class="container header-inner">
             <div class="logo">
                 <span class="logo-icon">⚡</span> ElectroBénin
             </div>
             <nav class="main-nav">
-                <a href="#top" class="active">Accueil</a>
-                <a href="#categories">Catalogue</a>
-                <a href="#tracking">Suivi commande</a>
+                <a href="#top" class="nav-link active">Accueil</a>
+                <a href="#categories" class="nav-link">Catalogue</a>
+                <a href="#tracking" class="nav-link">Suivi commande</a>
                 <a href="#" class="cart-btn">
                     <span class="cart-icon">🛒</span> Panier
                     <span class="cart-count">0</span>
@@ -32,11 +32,12 @@
     <!-- MENU MOBILE -->
     <nav class="mobile-nav">
         <div class="container mobile-nav-links">
-            <a href="#top">Accueil</a>
-            <a href="#categories">Catalogue</a>
-            <a href="#tracking">Suivi commande</a>
-            <a href="#" class="cart-link">
-                <span class="cart-icon">🛒</span> Panier <span class="cart-count">0</span>
+            <a href="#top" class="nav-link">Accueil</a>
+            <a href="#categories" class="nav-link">Catalogue</a>
+            <a href="#tracking" class="nav-link">Suivi commande</a>
+            <a href="#" class="cart-btn">
+                <span class="cart-icon">🛒</span> Panier
+                <span class="cart-count">0</span>
             </a>
         </div>
     </nav>
@@ -51,9 +52,171 @@
         </div>
     </section>
 
-    <!-- Tes sections catégories, why-us, products, testimonials, newsletter restent les mêmes -->
+    <!-- CATÉGORIES -->
+    <section id="categories">
+        <div class="container">
+            <h2>Nos Catégories</h2>
+            <p class="section-subtitle">Trouvez exactement ce dont vous avez besoin</p>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4361ee, #7209b7);">🖥️</div>
+                    <h3>Microcontrôleurs</h3>
+                    <p>Arduino, Raspberry Pi, ESP32, STM32</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #7209b7, #f72585);">📡</div>
+                    <h3>Capteurs</h3>
+                    <p>Température, mouvement, distance, humidité</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4cc9f0, #4361ee);">🔌</div>
+                    <h3>Connecteurs</h3>
+                    <p>Câbles, prises, adaptateurs, borniers</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #f72585, #ff006e);">⚡</div>
+                    <h3>Résistances</h3>
+                    <p>Toutes valeurs et puissances disponibles</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #ff006e, #ff4d6d);">🔋</div>
+                    <h3>Alimentation</h3>
+                    <p>Transformateurs, batteries, chargeurs</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #212529, #495057);">🛠️</div>
+                    <h3>Outils</h3>
+                    <p>Multimètres, fers à souder, kits</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #06ffa5, #00d1ff);">🖥️</div>
+                    <h3>Afficheurs</h3>
+                    <p>LCD, LED, OLED, écrans tactiles</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #8900ff, #c300ff);">🧰</div>
+                    <h3>Condensateurs</h3>
+                    <p>Électrolytiques, céramiques, tantale</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- FOOTER OPTIMISÉ SUBLIME -->
+    <!-- WHY US -->
+    <section id="why-us">
+        <div class="container">
+            <h2>Pourquoi nous choisir ?</h2>
+            <p class="section-subtitle">Votre satisfaction est notre priorité</p>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4361ee, #7209b7);">🛡️</div>
+                    <h3>Qualité garantie</h3>
+                    <p>Tous nos produits sont testés et certifiés pour une qualité optimale</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #212529, #495057);">🚚</div>
+                    <h3>Livraison rapide</h3>
+                    <p>Livraison dans tout le Bénin sous 24-48h</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon" style="background: linear-gradient(135deg, #4361ee, #7209b7);">🎧</div>
+                    <h3>Support technique</h3>
+                    <p>Assistance technique gratuite par nos experts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUITS -->
+    <section id="products">
+        <div class="container">
+            <h2>Meilleures ventes</h2>
+            <p class="section-subtitle">Les produits préférés de nos clients</p>
+            <div class="grid">
+                <div class="card product-card">
+                    <img src="https://stm32-base.org/assets/img/boards/STM32F103C8T6_Blue_Pill-2.jpg" alt="STM32F103C8T6">
+                    <span class="tag">microcontrôleurs</span>
+                    <h3>STM32F103C8T6</h3>
+                    <p>Microcontrôleur ARM Cortex-M3 32 bits, haute performance. Idéal pour les projets avancés...</p>
+                    <p class="price">1 800 FCFA</p>
+                    <button class="btn-cart">🛒</button>
+                    <p class="stock">✓ En stock (40 disponibles)</p>
+                </div>
+                <div class="card product-card">
+                    <img src="https://store-usa.arduino.cc/cdn/shop/files/A000073_00.front_1200x900.jpg?v=1727102668" alt="Arduino Uno R3">
+                    <span class="tag">microcontrôleurs</span>
+                    <h3>Arduino Uno R3</h3>
+                    <p>Carte de développement basée sur le microcontrôleur ATmega328P. Idéale pour les débutants...</p>
+                    <p class="price">15 000 FCFA</p>
+                    <button class="btn-cart">🛒</button>
+                    <p class="stock">✓ En stock (25 disponibles)</p>
+                </div>
+                <div class="card product-card">
+                    <img src="https://m.media-amazon.com/images/I/61R1A7CuHTL._AC_SL1500_.jpg" alt="Arduino Nano">
+                    <span class="tag">microcontrôleurs</span>
+                    <h3>Arduino Nano</h3>
+                    <p>Carte de développement compacte, basée sur l'ATmega328. Parfaite pour les projets où l'espace...</p>
+                    <p class="price">10 000 FCFA</p>
+                    <button class="btn-cart">🛒</button>
+                    <p class="stock">✓ En stock (35 disponibles)</p>
+                </div>
+                <div class="card product-card">
+                    <img src="https://store-usa.arduino.cc/cdn/shop/files/A000067_00.front_1200x900.jpg?v=1727102662" alt="Arduino Mega 2560 R3">
+                    <span class="tag">microcontrôleurs</span>
+                    <h3>Arduino Mega 2560 R3</h3>
+                    <p>Carte de développement puissante avec un grand nombre de pins E/S. Idéale pour les projets complexes...</p>
+                    <p class="price">35 000 FCFA</p>
+                    <button class="btn-cart">🛒</button>
+                    <p class="stock">✓ En stock (15 disponibles)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TÉMOIGNAGES -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 style="color: white;">Témoignages clients</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Ce que disent nos clients satisfaits</p>
+            <div class="grid">
+                <div class="testimonial-card">
+                    <p>"Service excellent et produits de qualité. Je recommande vivement ElectroBénin pour tous vos besoins électroniques."</p>
+                    <div class="stars">★★★★★</div>
+                    <cite>Koffi Mensah</cite>
+                    <small>Ingénieur électronique</small>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Livraison rapide et support technique très utile. Parfait pour mes projets d'études !"</p>
+                    <div class="stars">★★★★★</div>
+                    <cite>Fatou Diallo</cite>
+                    <small>Étudiante en génie</small>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Large choix de composants et prix compétitifs. Mon fournisseur de référence au Bénin."</p>
+                    <div class="stars">★★★★★</div>
+                    <cite>Jean-Baptiste</cite>
+                    <small>Maker passionné</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter">
+        <div class="container">
+            <div class="newsletter-card">
+                <span class="newsletter-icon">✉️</span>
+                <h2>Restez informé</h2>
+                <p>Recevez nos dernières offres et nouveautés directement dans votre boîte mail</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse e-mail" required>
+                    <button type="submit">S'abonner</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CLASSE MONDIALE -->
     <footer>
         <div class="container footer-inner">
             <div class="footer-logo-section">
