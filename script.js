@@ -1,15 +1,22 @@
 // script.js - JavaScript pour ElectroBénin sublime
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Menu hamburger mobile
+    // 1. Menu hamburger mobile + desktop
     const hamburger = document.querySelector('.hamburger');
-    const body = document.body;
+    const mainNav = document.querySelector('.main-nav');
 
     hamburger.addEventListener('click', () => {
-        body.classList.toggle('menu-open');
-        hamburger.textContent = body.classList.contains('menu-open') ? '✕' : '☰';
+        mainNav.classList.toggle('active');
+        hamburger.textContent = mainNav.classList.contains('active') ? '✕' : '☰';
     });
 
+    // Fermer le menu au clic sur un lien
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            mainNav.classList.remove('active');
+            hamburger.textContent = '☰';
+        });
+    });
     // 2. Panier
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartCount = document.createElement('span');
