@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    document.querySelectorAll('.mobile-nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            if (mobileNav) mobileNav.classList.remove('active');
-            if (body) body.classList.remove('menu-open');
-            if (hamburger) hamburger.textContent = '☰';
+            mobileNav.classList.remove('active');
+            body.classList.remove('menu-open');
+            hamburger.textContent = '☰';
         });
     });
 
@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Panier (compteur dans header et mobile)
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     const cartCounts = document.querySelectorAll('.cart-count');
 
@@ -54,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 toast.className = 'toast';
                 toast.textContent = `${name} ajouté au panier ! 🛒`;
                 document.body.appendChild(toast);
-
                 setTimeout(() => toast.classList.add('show'), 100);
                 setTimeout(() => {
                     toast.classList.remove('show');
@@ -64,27 +64,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const newsletterForm = document.querySelector('.newsletter-form');
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const email = newsletterForm.querySelector('input[type="email"]')?.value.trim() || '';
-            if (email) {
-                alert(`Merci ! Vous êtes abonné avec ${email} 📧`);
-                newsletterForm.reset();
-            }
-        });
-    }
-
+    // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
             if (href !== '#' && href !== '') {
                 e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
+                document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
