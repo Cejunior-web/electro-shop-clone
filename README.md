@@ -78,8 +78,15 @@ Outils:
 
 
 🛠️ Installation & Démarrage
-bash
-    # 1. Cloner le dépôt
+
+### Prérequis
+- Navigateur web moderne (Chrome, Firefox, Edge)
+- Éditeur de code (VS Code recommandé)
+- Git (pour cloner le projet)
+
+### Étapes d'installation
+
+# 1. Cloner le dépôt
 git clone https://github.com/cejunior-web/electro-shop-clone.git
 
 # 2. Naviguer dans le dossier
@@ -92,19 +99,49 @@ code .  # Ou votre éditeur préféré
 # Double-cliquez simplement sur index.html
 
 
-👨‍💻 Auteur
-<div align="center">
-Cejunior OKE
-Life Lover• En Route vers le Full-Stack
+## 🎯 **Version simplifiée si tu préfères :**
 
-https://img.shields.io/badge/%F0%9F%8C%90_Portfolio-000?style=for-the-badge
-https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github
-https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin
+```markdown
+## 🚀 Installation Rapide
+
+```bash
+# Cloner et lancer
+git clone https://github.com/cejunior-web/electro-shop-clone
+cd electro-shop-clone
+start index.html  # Sur Windows
+
+## 🤔 **Si ton projet n'a pas besoin d'installation :**
+
+Même pour un projet simple HTML/CSS, garde au minimum :
+
+```markdown
+## 📂 Utilisation
+
+1. Téléchargez ou clonez le projet
+2. Ouvrez `index.html` dans votre navigateur
+3. Explorez les différentes sections
+
+🎯 **Accès direct :** [Ouvrir la démo](https://cejunior-web.github.io/electro-shop-clone/)
+
+## 👨‍💻 Auteur
+
+<div align="center">
+
+### **Cejunior OKE**
+*HumanKind Lover | Développeur Full-Stack en devenir*
+
+[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-000?style=for-the-badge)](https://github.com/cejunior-web)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/cejunior-web)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/cejunior-oke-726965376)
 
 </div>
 
-<div align="center">
-⭐ Si ce projet vous plaît, n'hésitez pas à lui donner une étoile !
-« Le code est comme la poésie – il doit être beau à lire et efficace à exécuter. »
+---
 
-</div> ```
+<div align="center">
+
+### ⭐ **Si ce projet vous plaît, n'hésitez pas à lui donner une étoile !**
+
+*« Le code est comme la poésie – il doit être beau à lire et efficace à exécuter. »*
+
+</div>
