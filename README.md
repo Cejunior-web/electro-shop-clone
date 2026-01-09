@@ -123,22 +123,23 @@ Même pour un projet simple HTML/CSS, garde au minimum :
 
 🎯 **Accès direct :** [Ouvrir la démo](https://cejunior-web.github.io/electro-shop-clone/)
 
-## 👨‍💻 Auteur
+## 👤 Auteur
 
-<div align="center">
+**Cejunior OKE**  
+*Développeur Web Full-Stack en formation*
 
-### **Cejunior OKE**
-*HumanKind Lover | Développeur Full-Stack en devenir*
-
-[![Portfolio](https://img.shields.io/badge/🌐_Portfolio-000?style=for-the-badge)](https://github.com/cejunior-web)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github)](https://github.com/cejunior-web)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/cejunior-oke-726965376)
-
-</div>
+- **GitHub** : [https://github.com/cejunior-web](https://github.com/cejunior-web)
+- **LinkedIn** : [https://www.linkedin.com/in/cejunior-oke-726965376](https://www.linkedin.com/in/cejunior-oke-726965376)
 
 ---
 
 <div align="center">
+
+⭐ **Si ce projet vous plaît, n'hésitez pas à lui donner une étoile !**
+
+*« Le code est comme la poésie – il doit être beau à lire et efficace à exécuter. »*
+
+</div>
 
 ### ⭐ **Si ce projet vous plaît, n'hésitez pas à lui donner une étoile !**
 
