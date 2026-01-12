@@ -1,4 +1,4 @@
-# 🛍️ Electro Shop Clone
+# 🛍️ ElectroBenin
 
 <div align="center">
 

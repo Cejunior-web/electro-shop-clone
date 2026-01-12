@@ -1,0 +1,99 @@
+{
+  "name": "ElectroBénin",
+  "short_name": "ElectroBénin",
+  "description": "Boutique de composants électroniques au Bénin",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF9F5",
+  "theme_color": "#FF6B35",
+  "orientation": "portrait",
+  "scope": "/",
+  "lang": "fr",
+  "dir": "ltr",
+  "categories": ["shopping", "education", "technology"],
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/72x72/FF6B35/ffffff?text=E",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://via.placeholder.com/96x96/FF6B35/ffffff?text=E",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/128x128/FF6B35/ffffff?text=E",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/144x144/FF6B35/ffffff?text=E",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/152x152/FF6B35/ffffff?text=E",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/192x192/FF6B35/ffffff?text=E",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/384x384/FF6B35/ffffff?text=E",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512/FF6B35/ffffff?text=E",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://via.placeholder.com/1280x720/FF6B35/ffffff?text=ElectroBénin+Desktop",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "https://via.placeholder.com/750x1334/FF6B35/ffffff?text=ElectroBénin+Mobile",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Catalogue",
+      "short_name": "Catalogue",
+      "description": "Voir tous les produits",
+      "url": "/#products",
+      "icons": [
+        {
+          "src": "https://via.placeholder.com/96x96/FF6B35/ffffff?text=📦",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Panier",
+      "short_name": "Panier",
+      "description": "Voir mon panier",
+      "url": "/panier.html",
+      "icons": [
+        {
+          "src": "https://via.placeholder.com/96x96/FF6B35/ffffff?text=🛒",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}
